@@ -1,0 +1,22 @@
+{
+  "name": "workout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeyDela/Joey_workout18.git"
+  },
+  "author": "Joey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeyDela/Joey_workout18/issues"
+  },
+  "homepage": "https://github.com/JoeyDela/Joey_workout18#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
