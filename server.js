@@ -1,13 +1,21 @@
 "use strict";
 const express = require("express");
 const app = express();
-// const stats = require(/route/stats);
+const path = require("path");
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.get("/", (req, res) => {
   console.log(req.url);
-  res.send("index.html");
+  res.sendFile(path.join(__dirname, "/public/html/index.html"));
 });
-app.route("/stats", (req, res) => {});
+app.get("/stats", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/html/stats.html"));
+});
+app.get("/exercise", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/html/exercise.html"));
+});
 
 app.listen(3001, (err) => {
   if (err) {
